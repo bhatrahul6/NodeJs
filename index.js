@@ -17,20 +17,20 @@ app.all('/students', (req,res,next) => {
 });
 
 app.get('/students', (req,res,next) => {
-    res.end('Will send all the dishes to you!');
+    res.end('Will send all the details to you!');
 });
 
 app.post('/students', (req, res, next) => {
- res.end('Will add the dish: ' + req.body.name + ' with details: ' + req.body.description);
+ res.end('Will add the details: ' + req.body.name + ' with details: ' + req.body.description);
 });
 
 app.put('/students', (req, res, next) => {
   res.statusCode = 403;
-  res.end('PUT operation not supported on /dishes');
+  res.end('PUT operation not supported on /students');
 });
  
 app.delete('/students', (req, res, next) => {
-    res.end('Deleting all dishes');
+    res.end('Deleting all students');
 });
 
 app.get('/students/:studentId', (req,res,next) => {
